@@ -17,7 +17,7 @@ def load_data(nrows):
     return data
 
 data_load_state = st.text('Loading data...')
-data = load_data(1000)
+data = load_data(100)
 data_load_state.text("Done! (using st.cache)")
 
 # Some number in the range 0-23
