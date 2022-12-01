@@ -4,6 +4,7 @@ import streamlit as st
 
 st.title('Uber pickups in NYC :statue_of_liberty:')
 st.subheader("Viajes de Uber en la ciudad de Nueva York con filtros por hora.")
+st.write('By: Evelyn Mejía A01652115')
 
 
 DATA_URL = 'https://s3-us-west-2.amazonaws.com/streamlit-demo-data/uber-raw-data-sep14.csv.gz'
