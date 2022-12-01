@@ -6,7 +6,7 @@ st.title('Uber pickups in NYC :statue_of_liberty:')
 st.subheader("Viajes de Uber en la ciudad de Nueva York con filtros por hora.")
 
 
-DATA_URL = 'uber-raw-data-sep14.csv'
+DATA_URL = 'https://s3-us-west-2.amazonaws.com/streamlit-demo-data/uber-raw-data-sep14.csv.gz'
 
 
 @st.cache
@@ -19,7 +19,7 @@ data = load_data(1000)
 data_load_state.text("Done! (using st.cache)")
 
 
-df=pd.read_csv('uber-raw-data-sep14.csv')
+df=pd.read_csv(DATA_URL)
 df['Date/Time']=pd.to_datetime(df['Date/Time'])
 df['hour']=df['Date/Time'].dt.strftime('%H')
 df_hours=df['hour'].value_counts()
